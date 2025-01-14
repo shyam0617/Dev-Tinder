@@ -11,3 +11,11 @@ Currently, two official plugins are available:
 # Dev-Tinder
 Full stack project where developers will interact
 >>>>>>> ef7f72c7ecd2e68aaeb81881aa7c021d3dfbff55
+
+Steps://Vudumu Shyamsunder
+create a Vite+React applications
+Remove uecessary code
+installed tailwind css
+installed daisy UI
+add navbar component to App.jsx
+
