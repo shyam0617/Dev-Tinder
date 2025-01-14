@@ -21,6 +21,8 @@ add navbar component to App.jsx
 created navabar.jsx separate file
 installed react router dom
 
+Steps:
+basic login page
 
 
 Body
