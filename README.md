@@ -18,4 +18,28 @@ Remove uecessary code
 installed tailwind css
 installed daisy UI
 add navbar component to App.jsx
+created navabar.jsx separate file
+installed react router dom
 
+
+
+Body
+Navbar
+Router/=>Feed
+Router=/login =>login page
+Router=/connection  =>Connection
+Router=/Profile => Profiles
+
+Topics Learned:
+1.Topic Children Routes how will you create 
+2.what is default port of react ie localhost 3000: how to change it 
+
+    modify part of package.json from:
+
+            for Linux and MacOS to:
+            "start": "PORT=3006 react-scripts start"
+
+            Windows to:
+            "start": "set PORT=3006 && react-scripts start"
+3.what is <Outlet/> came from react router dom any children routes of body render here if componenet is Body
+   
