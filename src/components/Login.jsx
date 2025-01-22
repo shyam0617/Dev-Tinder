@@ -9,6 +9,8 @@ const Login=()=>{
 
     const [emailId,setEmailId]=useState("");
     const [password,setPassword]=useState("");
+    const [loginmessage,setloginmessage]=useState("");
+
     const dispatch=useDispatch();
     const navigate=useNavigate();
    
@@ -23,13 +25,13 @@ const Login=()=>{
             {withCredentials:true});//to have cookie in application
             //console.log(res.data);
             dispatch(addUser(res.data));
-            return navigate("/");
+            return navigate("/Feed");
         }
         catch(err)
-        {
+        {   
+            setloginmessage("Error ! Provide valid details");
             console.error(err);
-        }
-        
+        }  
     }
 
 return(
@@ -57,6 +59,7 @@ return(
                 onChange={(e)=>setPassword(e.target.value)} />
 
         </label>
+        <div className="red">{loginmessage}</div>
         <div className="card-actions justify-center">
         <button className="btn btn-primary" onClick={handleLogin}>Login</button>
         </div>

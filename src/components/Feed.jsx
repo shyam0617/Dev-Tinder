@@ -1,7 +1,7 @@
 const Feed=()=>{
     return(
         <div>
-            FeedPage;
+            FeedPage
         </div>
     )
 }
