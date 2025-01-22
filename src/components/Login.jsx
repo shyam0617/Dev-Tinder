@@ -1,17 +1,29 @@
 import axios from "axios";
-import { useState } from "react";
+import { useState} from "react";
+import {useDispatch}from "react-redux";
+import { addUser } from "../utils/userSlice";
+import { useNavigate } from "react-router-dom";
+import {BASE_URL} from "../utils/constants";
+
 const Login=()=>{
 
     const [emailId,setEmailId]=useState("");
     const [password,setPassword]=useState("");
-
+    const dispatch=useDispatch();
+    const navigate=useNavigate();
+   
     const handleLogin= async()=>{
-        
         try{
-            const user=axios.post("http://localhost:3000/loginuser",{
+            const res= await axios.post(
+                BASE_URL+"/loginuser",
+                {
                 emailId,
                 password
-            },{withCredentials:true});
+                },
+            {withCredentials:true});//to have cookie in application
+            //console.log(res.data);
+            dispatch(addUser(res.data));
+            return navigate("/");
         }
         catch(err)
         {
