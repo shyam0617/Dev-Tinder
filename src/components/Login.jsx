@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState} from "react";
 import {useDispatch}from "react-redux";
 import { addUser } from "../utils/userSlice";
-import { useNavigate } from "react-router-dom";
+import { data, useNavigate } from "react-router-dom";
 import {BASE_URL} from "../utils/constants";
 
 const Login=()=>{
@@ -29,7 +29,7 @@ const Login=()=>{
         }
         catch(err)
         {   
-            setloginmessage("Error ! Provide valid details");
+            setloginmessage(err?.response?.data || "Error ! Provide valid details");
             console.error(err);
         }  
     }
@@ -59,7 +59,7 @@ return(
                 onChange={(e)=>setPassword(e.target.value)} />
 
         </label>
-        <div className="red">{loginmessage}</div>
+        <p className="text-red-500">{loginmessage}</p>
         <div className="card-actions justify-center">
         <button className="btn btn-primary" onClick={handleLogin}>Login</button>
         </div>
