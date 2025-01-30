@@ -25,8 +25,6 @@ function App() {
                 </Routes>
       </BrowserRouter>
     </Provider>
-    
-    
     </>
   )
 }
