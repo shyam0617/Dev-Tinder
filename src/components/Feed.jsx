@@ -3,7 +3,7 @@ import { BASE_URL } from "../utils/constants";
 import axios from "axios";
 import { addFeed } from "../utils/feedSlice";
 import { useEffect } from "react";
-import Usercard from "./usercard";
+import Usercard from "./Usercard";
 
 const Feed=()=>{
     const feed=useSelector((store)=>store.feed);
@@ -26,7 +26,7 @@ const Feed=()=>{
     },[]);
     return (
         feed && (
-        <div className="flex justify-center my-10">
+        <div className="flex justify-center my-20">
              <Usercard user={feed[1]}/>
         </div>)
     )

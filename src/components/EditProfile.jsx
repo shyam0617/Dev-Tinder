@@ -39,7 +39,7 @@ const EditProfile=({user})=>{
         }    
     }
     return(
-        <div className="flex justify-center my-10">
+        <div className="flex justify-center my-20">
         <div className="card bg-base-300 w-96 shadow-xl h-300">
             <div className="card-body flex items-center justify-center">
                 <h2 className="card-title ">Edit Profile</h2>
@@ -66,7 +66,7 @@ const EditProfile=({user})=>{
                         className="input input-bordered w-full max-w-xs"onChange={(e)=>setage(e.target.value)}
                         />
                         <div className="label">
-                            <span className="label-text">skills</span>
+                            <span className="label-text">about</span>
                         </div>
                         <input type="text" 
                         value={about} 

@@ -7,8 +7,8 @@ import {BASE_URL} from "../utils/constants";
 
 const Login=()=>{
 
-    const [emailId,setEmailId]=useState("");
-    const [password,setPassword]=useState("");
+    const [EmailId,setEmailId]=useState("");
+    const [Password,setPassword]=useState("");
     const [loginmessage,setloginmessage]=useState("");
 
     const dispatch=useDispatch();
@@ -19,8 +19,8 @@ const Login=()=>{
             const res= await axios.post(
                 BASE_URL+"/loginuser",
                 {
-                emailId,
-                password
+                EmailId,
+                Password,
                 },
             {withCredentials:true});//to have cookie in application
             //console.log(res.data);
@@ -35,7 +35,7 @@ const Login=()=>{
     }
 
 return(
-<div className="flex justify-center my-10">
+<div className="flex justify-center my-20">
 <div className="card bg-base-300 w-96 shadow-xl">
     <div className="card-body flex items-center justify-center">
         <h2 className="card-title ">LOGIN</h2>
@@ -45,7 +45,7 @@ return(
                 </div>
 
                 <input type="text" 
-                value={emailId} 
+                value={EmailId} 
                 className="input input-bordered w-full max-w-xs"
                 onChange={(e)=>setEmailId(e.target.value)} />
 
@@ -54,7 +54,7 @@ return(
                 </div>
 
                 <input type="text" 
-                value={password} 
+                value={Password} 
                 className="input input-bordered w-full max-w-xs"
                 onChange={(e)=>setPassword(e.target.value)} />
 
