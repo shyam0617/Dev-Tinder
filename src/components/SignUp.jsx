@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { BASE_URL } from "../utils/constants";
 import { useDispatch ,useSelector} from "react-redux";
-import { addFeed } from "../utils/feedSlice";
 import {useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { addUser } from "../utils/userSlice";
 
 const SignUp=()=>{
     const [Email,setEmailId]=useState("");
@@ -32,8 +32,8 @@ const SignUp=()=>{
                     withCredentials:true
                 }
             )
-            dispatch(addFeed(res.data.data));
-            return navigate("/login");
+            dispatch(addUser(res.data.data));
+            return navigate("/profile");
         }
         catch(err)
         {
