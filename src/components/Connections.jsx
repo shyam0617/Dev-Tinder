@@ -7,25 +7,32 @@ import { addConnections } from "../utils/connectionSlice";
 const Connections=()=>{
     const dispatch=useDispatch();
     const connections=useSelector((store)=>store.connections);
-   // console.log(connections);
     const allConnections=async()=>{
-       const set= await axios.get(BASE_URL+"/user/connections",{withCredentials:true});
-       console.log(set.data.data);
-       dispatch(addConnections(set.data.data));
-       console.log(set.data.data);
+      try{
+        const set= await axios.get(BASE_URL+"/user/connections",{withCredentials:true});
+        dispatch(addConnections(set.data.data));
+      }
+      catch(err)
+      {
+          
+      }
     }
     useEffect(()=>{
         allConnections();
     },[]);
     
-    if (!connections) 
-        return;
-    if (connections.length === 0) return <h1> No Connections Found</h1>;
+    // if (!connections) 
+    // {    
+    //       return <h1> No Connections Found</h1>;;
+    // }
+    // if (connections.length === 0) return <h1> No Connections Found</h1>;
+    if(!connections || connections.length==0)
+      return <h1>No connections found</h1>;
 
     return (
     <div className="text-center my-20">
       <h1 className="text-bold text-white text-3xl">Your Connections</h1>
-
+    
       {connections.map((connection) => {
         const { _id, firstName, SecondName, PhotoUrl, age, gender, about } =
           connection;

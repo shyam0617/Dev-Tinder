@@ -2,8 +2,9 @@ import axios from "axios";
 import { useState} from "react";
 import {useDispatch}from "react-redux";
 import { addUser } from "../utils/userSlice";
-import { data, useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 import {BASE_URL} from "../utils/constants";
+import { Link } from "react-router-dom";
 
 const Login=()=>{
 
@@ -63,6 +64,7 @@ return(
         <div className="card-actions justify-center">
         <button className="btn btn-primary" onClick={handleLogin}>Login</button>
         </div>
+        <p>Dont have an Account? <Link to="/SignUp">SignUp</Link></p>
     </div>
 </div>
 </div>
