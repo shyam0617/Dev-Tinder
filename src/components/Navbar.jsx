@@ -46,6 +46,11 @@ const Navbar =()=>{
           </Link>
         </li>
         <li>
+          <Link  to="/feed" className="justify-between">
+            feed
+          </Link>
+        </li>
+        <li>
          <Link to="/connections" className="text-center">Connections</Link>
         </li>
         <li>

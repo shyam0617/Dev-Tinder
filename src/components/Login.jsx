@@ -54,7 +54,7 @@ return(
                     <span className="label-text">Password</span>
                 </div>
 
-                <input type="text" 
+                <input type="Password" 
                 value={Password} 
                 className="input input-bordered w-full max-w-xs"
                 onChange={(e)=>setPassword(e.target.value)} />
