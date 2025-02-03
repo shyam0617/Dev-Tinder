@@ -9,7 +9,8 @@ import {Provider} from "react-redux";
 import appStore from './utils/appStore';
 import Connections from './components/Connections';
 import Request from "./components/Request";
-import SignUp from './components/Signup';
+import SignUp from './components/SignUp';
+
 
 
 function App() {

@@ -32,6 +32,14 @@ Router=/login =>login page
 Router=/connection  =>Connection
 Router=/Profile => Profiles
 
+redux:
+react redux installation 
+create a appstore that can used by all components using react redux
+configure store => Provider in main app.js =>  create userSlice => add reducer to store
+not able to acces other routes witout login
+created logout feature
+
+
 Topics Learned:
 1.Topic Children Routes how will you create 
 2.what is default port of react ie localhost 3000: how to change it 
